@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
-// import { useDispatch } from 'react-redux';
-// import { fetchMovie, searchMovie } from '../../redux/reducer';
+import { fetchMovie } from '../../redux/movie/movieAction';
+import { useDispatch } from 'react-redux';
+// import { fetchMovie } from '../../redux/reducer';
 import './SearchForm.scss';
 
 export const SearchForm = () => {
   const [term, setTerm] = useState('');
-  // const dispatch = useDispatch();
-
+  const dispatch = useDispatch();
   const submitHendler = (e) => {
     e.preventDefault();
-    // dispatch(searchMovie(term));
+    dispatch(fetchMovie(term));
+
     console.log(term);
   };
 

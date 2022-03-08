@@ -1,13 +1,13 @@
 @import '../../common/colors.scss';
 
 .card-top {
-  height: 280px;
-  justify-content: center;
+  height: 290px;
+  width: 200;
   text-align: center;
 
   img {
     width: 100%;
-    height: 100%;
+    height: 90%;
   }
   background: $secondary-color;
   cursor: pointer;
@@ -17,27 +17,25 @@
     transform: scale(1.05);
     transition: all 0.4s;
   }
-}
-
-.card-bottom {
-  padding: 0px;
-  margin-bottom: -20px;
-}
-.card-info {
-  color: $font-primary;
-  text-align: center;
+  h4 {
+    color: $font-primary;
+    padding: 0;
+    margin: 0;
+  }
 }
 
 .cardTitle {
-  margin-top: -43px;
-  height: 40px;
+  margin-top: -7px;
+  height: 45px;
   width: auto;
-  position: relative;
   background: $secondary-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h4 {
   color: $font-primary;
-  padding-top: 5px;
+  padding: 0;
   margin: 0;
 }

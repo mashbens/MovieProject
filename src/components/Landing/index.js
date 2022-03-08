@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { fetchMovie } from '../../redux/reducer';
 import MovieCard from '../MovieCard';
+import Spinner from '../layout/Spinner';
 import './Landing.scss';
 
 const Landing = ({ movie, fetchMovie }) => {
@@ -10,7 +11,7 @@ const Landing = ({ movie, fetchMovie }) => {
   }, []);
 
   return movie.loading ? (
-    <h2>Loading</h2>
+    <Spinner />
   ) : movie.error ? (
     <h2>{movie.error}</h2>
   ) : (

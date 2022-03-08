@@ -21,11 +21,12 @@ export const fetchMovieFailure = (error) => {
   };
 };
 
-export const fetchMovie = () => {
+export const fetchMovie = (term) => {
+  const text = 'man';
   return (dispatch) => {
     dispatch(fetchMovieRequest);
     axios
-      .get(`http://www.omdbapi.com/?s=man&apikey=${APIKey}`)
+      .get(`http://www.omdbapi.com/?s=${term ? term : text}}&apikey=${APIKey}`)
       .then((response) => {
         const movies = response.data;
         dispatch(fetchMovieSuccess(movies));
