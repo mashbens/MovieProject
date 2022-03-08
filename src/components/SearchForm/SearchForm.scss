@@ -1,0 +1,47 @@
+@import '../../common/colors.scss';
+
+input {
+  font-size: 13px;
+  font-weight: 600;
+  height: 30px;
+  width: 250px;
+  border-radius: 5px 0 0 5px;
+  border: none;
+  text-indent: 15px;
+  font-weight: normal;
+  @media screen and (max-width: 460px) {
+    font-size: 13px;
+    font-weight: 600;
+    height: 30px;
+    width: auto;
+    border-radius: 5px 0 0 5px;
+    border: none;
+    text-indent: 15px;
+    font-weight: normal;
+  }
+}
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+button {
+  font-size: 14px;
+  font-weight: 0;
+  height: 32px;
+  width: 90px;
+  color: $font-primary;
+  background-color: $font-secondary;
+  border-radius: 0 5px 5px 0;
+  border: none;
+  @media screen and (max-width: 480px) {
+    font-size: 12px;
+    font-weight: 0;
+    height: 32px;
+    width: auto;
+    color: $font-primary;
+    background-color: $font-secondary;
+    border-radius: 0 5px 5px 0;
+    border: none;
+  }
+}

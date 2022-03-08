@@ -1,0 +1,23 @@
+@import '../../common/colors.scss';
+
+.header {
+  background-color: $secondary-color;
+  height: 56px;
+  padding: 0px 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.link {
+  text-decoration: none;
+}
+
+.logo {
+  color: $font-primary;
+  font-size: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
+}

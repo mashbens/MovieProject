@@ -1,0 +1,21 @@
+@import '../../common/colors.scss';
+
+.movie-list,
+.show-list {
+  margin: 20px 0px;
+  padding: 0 3rem 0 3rem;
+  justify-items: center;
+}
+
+.movie-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-gap: 28px;
+}
+
+.title {
+  font-size: 34px;
+  padding-left: 20px;
+  font-weight: 500;
+  color: #2e67a0;
+}
