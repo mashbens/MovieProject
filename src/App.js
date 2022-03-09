@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Landing from './components/Landing';
 import PageNotFound from './components/PageNotFound';
-import MovieDetails from './components/MovieDetails';
 
 function App() {
   return (
@@ -14,7 +13,6 @@ function App() {
           <Routes>
             <Route path='*' element={<PageNotFound />} />
             <Route path='/' element={<Landing />} />
-            <Route path='/movie/:imdbID' element={<MovieDetails />} />
           </Routes>
         </div>
       </Router>
