@@ -14,7 +14,7 @@ function App() {
           <Routes>
             <Route path='*' element={<PageNotFound />} />
             <Route path='/' element={<Landing />} />
-            <Route path='/movie/:id' element={<MovieDetails />} />
+            <Route path='/movie/:imdbID' element={<MovieDetails />} />
           </Routes>
         </div>
       </Router>

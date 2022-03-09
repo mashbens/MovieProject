@@ -1,14 +1,16 @@
 import React, { useEffect } from 'react';
-import { connect } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { fetchMovie } from '../../redux/reducer';
 import MovieCard from '../MovieCard';
 import Spinner from '../layout/Spinner';
 import './Landing.scss';
 
-const Landing = ({ movie, fetchMovie }) => {
+const Landing = () => {
+  const dispatch = useDispatch();
+  const movie = useSelector((state) => state.movie);
   useEffect(() => {
-    fetchMovie();
-  }, []);
+    dispatch(fetchMovie());
+  }, [dispatch]);
 
   return movie.loading ? (
     <Spinner />
@@ -31,15 +33,4 @@ const Landing = ({ movie, fetchMovie }) => {
     </div>
   );
 };
-const mapStateProps = (state) => {
-  return {
-    movie: state.movie,
-  };
-};
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    fetchMovie: () => dispatch(fetchMovie()),
-  };
-};
-export default connect(mapStateProps, mapDispatchToProps)(Landing);
+export default Landing;
